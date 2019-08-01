@@ -1,11 +1,12 @@
--- phpMyAdmin SQL Dump
--- version 4.7.3
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Aug 01, 2019 at 01:05 AM
--- Server version: 5.6.40-84.0-log
--- PHP Version: 5.6.30
+-- TQ Senkungu
+-- Sean McQuade
+-- Biram Nicol
+-- Jeremy Bixby
+-- Group No 3 - D50 - ISQS 6338
+
+
+---SQL Script for building School District Financial Data Model
+---FINAL CLASS PROJECT: DELIVERABLE 2
 
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -20,10 +21,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `goodbusi_isqs_6338`
+-- Database: `D50_G03_OLTP`
 --
-CREATE DATABASE IF NOT EXISTS `goodbusi_isqs_6338` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `goodbusi_isqs_6338`;
+CREATE DATABASE IF NOT EXISTS `D50_G03_OLTP` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `D50_G03_OLTP`;
 
 -- --------------------------------------------------------
 
@@ -4432,7 +4433,15 @@ CREATE TABLE IF NOT EXISTS `district_financials` (
   KEY `fk_district_financials_districts1_idx` (`ncesid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- -----------------------------------------------------
+-- Inserts data from district financials staging table into prod table
+-- -----------------------------------------------------
+/*insert the content of staging table into the prod table*/
+INSERT INTO D50_G03_OLTP.district_financials (df_id, of_id, ncesid, df_amount, year)
+SELECT df_id, of_id, ncedid, df_amount, year
+FROM    D50_G03_OLTP.district_finacials_staging;
+
+DROP TABLE mydb.district_financials_staging;
 
 --
 -- Table structure for table `expenditure`
@@ -4454,7 +4463,6 @@ CREATE TABLE IF NOT EXISTS `expenditure` (
 --
 -- Table structure for table `exp_categorys`
 --
-
 CREATE TABLE IF NOT EXISTS `exp_categorys` (
   `ec_id` int(11) NOT NULL,
   `ec_name` varchar(45) DEFAULT NULL,
@@ -4466,6 +4474,14 @@ CREATE TABLE IF NOT EXISTS `exp_categorys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
+-- -----------------------------------------------------
+-- Inserts data from exp_categorys staging table into the prod table
+-- -----------------------------------------------------
+INSERT INTO D50_G03_OLTP.exp_categorys (ec_id, ec_name, ec_desc, ec_code, parent_ec_id)
+SELECT ec_id, ec_name, ec_desc, ec_code, null
+FROM    D50_G03_OLTP.exp_categorys_staging;
+
+DROP TABLE D50_G03_OLTP.exp_categorys_staging;
 
 --
 -- Table structure for table `exp_types`
@@ -4512,6 +4528,16 @@ CREATE TABLE IF NOT EXISTS `other_financials` (
 
 -- --------------------------------------------------------
 
+-- -----------------------------------------------------
+-- Insert the content of the other financials staging table into the prod table
+-- -----------------------------------------------------
+INSERT INTO D50_G03_OLTP.other_financials (of_id, of_name, of_desc, of_code)
+SELECT rof_id, of_name, of_desc, of_code
+FROM    D50_G03_OLTP.other_financials_staging;
+
+/*drops the rev_sources staging table*/
+DROP TABLE D50_G03_OLTP.other_financials_staging;
+
 --
 -- Table structure for table `revenue`
 --
@@ -4539,6 +4565,16 @@ CREATE TABLE IF NOT EXISTS `rev_sources` (
   `src_desc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`rs_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -----------------------------------------------------
+-- Insert the content of staging table into the prod table
+-- -----------------------------------------------------
+INSERT INTO D50_G03_OLTP.rev_sources (rs_id, src_name, src_desc)
+SELECT rs_id, rs_name, rs_desc
+FROM    D50_G03_OLTP.rev_sources_staging;
+
+/*drops the rev_sources staging table*/
+DROP TABLE D50_G03_OLTP.rev_sources_staging;
 
 -- --------------------------------------------------------
 
