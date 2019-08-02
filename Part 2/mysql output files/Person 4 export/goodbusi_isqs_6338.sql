@@ -4416,6 +4416,15 @@ CREATE TABLE IF NOT EXISTS `districts` (
   KEY `fk_districts_countys1_idx` (`co_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Inserts into the districts table from the districts staging table
+--
+INSERT INTO D50_G03_OLTP.districts (ncesid, idcensus, dis_name, csa, cbsa, co_id, sl_id, tg_id)
+SELECT NCESID, IDCENSUS, NAME, CSA, CBSA, CONUM, SCHLEV, tg_id
+FROM    D50_G03_OLTP.districts_staging_final;
+
+DROP TABLE D50_G03_OLTP.districts_staging_final;
+
 -- --------------------------------------------------------
 
 --
@@ -4436,7 +4445,6 @@ CREATE TABLE IF NOT EXISTS `district_financials` (
 -- -----------------------------------------------------
 -- Inserts data from district financials staging table into prod table
 -- -----------------------------------------------------
-/*insert the content of staging table into the prod table*/
 INSERT INTO D50_G03_OLTP.district_financials (df_id, of_id, ncesid, df_amount, year)
 SELECT df_id, of_id, ncedid, df_amount, year
 FROM    D50_G03_OLTP.district_finacials_staging;
@@ -4595,6 +4603,15 @@ CREATE TABLE IF NOT EXISTS `rev_types` (
 -- --------------------------------------------------------
 
 --
+-- Inserting data from the staging table into the prod table
+--
+INSERT INTO D50_G03_OLTP.rev_types(rt_id, rt_name, rt_desc, rt_code, rs_id)
+SELECT rt_id, rt_name, rt_desc, rt_code, rs_id
+FROM D50_G03_OLTP.rev_types_staging
+
+DROP TABLE D50_G03_OLTP.rev_types_staging
+
+--
 -- Table structure for table `sch_levels`
 --
 
@@ -4606,6 +4623,17 @@ CREATE TABLE IF NOT EXISTS `sch_levels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
+--
+-- INSERT data into school levels prod db from staging
+--
+INSERT INTO D50_G03_OLTP.sch_levels (sl_id, sl_name, sl_desc)
+SELECT sl_id, sl_name, sl_desc
+FROM    D50_G03_OLTP.sch_level_staging;
+
+/*drops the rev_sources staging table*/
+DROP TABLE D50_G03_OLTP.sch_level_staging;
+
+
 
 --
 -- Table structure for table `states`
