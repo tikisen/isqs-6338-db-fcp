@@ -1,0 +1,64 @@
+﻿et_id,et_name,et_desc,et_code,ec_id
+1,,Current operation expenditure - Instruction,E13,1
+2,,State payments on behalf - Instruction benefits,J13,1
+3,,Own retirement system transfer - Instruction,J12,1
+4,,State payments on behalf - Instruction nonbenefits,J14,1
+5,,Exhibit - Payments to private schools,V91,1
+6,,Exhibit - Payments to charter schools,V92,1
+7,,Current operation expenditure - Pupil support,E17,2
+8,,Current operation expenditure - Instructional staff support,E07,2
+9,,Current operation expenditure - General administration,E08,2
+10,,Current operation expenditure - School administration,E09,2
+11,,Current operation expenditure - Operation and maintenance of plant,V40,2
+12,,Current operation expenditure - Student transportation,V45,2
+13,,Current operation expenditure - Business/central/other support services,V90,2
+14,,Current operation expenditure - Nonspecified support services,V85,2
+15,,State payments on behalf - Pupil support benefits,J17,2
+16,,State payments on behalf - Instructional staff support benefits,J07,2
+17,,State payments on behalf - General administration benefits,J08,2
+18,,State payments on behalf - School administration benefits,J09,2
+19,,State payments on behalf - Operation and maintenance of plant benefits,J40,2
+20,,State payments on behalf - Student transportation benefits,J45,2
+21,,State payments on behalf - Business/central/other support services benefits,J90,2
+22,,Own retirement system transfer - Support services,J11,2
+23,,"State payments on behalf - Support services, nonbenefits",J96,2
+24,,Current operation expenditure - Food services,E11,3
+25,,Current operation expenditure - Enterprise operations,V60,3
+26,,Current operation expenditure - Other elementary-secondary programs,V65,3
+27,,State payments on behalf - Other benefits,J10,3
+28,,State payments on behalf - Noninstructional and nonbenefits,J97,3
+29,,Current operation expenditure - Community services,V70,4
+30,,Current operation expenditure - Adult education,V75,4
+31,,Current operation expenditure - Other nonelementary-secondary programs,V80,4
+32,,State payments on behalf - Nonelementary-secondary programs,J98,4
+33,,Construction,F12,5
+34,,Purchase of land and existing structures,G15,5
+35,,Instructional equipment,K09,5
+36,,Other equipment,K10,5
+37,,Nonspecified equipment,K11,5
+38,,State payments on behalf - Capital outlay,J99,5
+39,,Payments to state governments,L12,2
+40,,Payments to local governments,M12,2
+41,,Payments to other school systems,Q11,2
+42,,Interest on school system debt,I86,2
+43,,Total salaries and wages,Z32,2
+44,,Total salaries and wages - Instruction,Z33,2
+45,,Total salaries and wages - Pupil support,V11,2
+46,,Total salaries and wages - Instructional staff support,V13,2
+47,,Total salaries and wages - General administration,V15,2
+48,,Total salaries and wages - School administration,V17,2
+49,,Total salaries and wages - Operation and maintenance of plant,V21,2
+50,,Total salaries and wages - Student transportation,V23,2
+51,,Total salaries and wages - Business/central/other support services,V37,2
+52,,Total salaries and wages - Food services,V29,2
+53,,Total employee benefit payments,Z34,2
+54,,Total employee benefit payments - Instruction,V10,2
+55,,Total employee benefit payments - Pupil support,V12,2
+56,,Total employee benefit payments - Instructional staff,V14,2
+57,,Total employee benefit payments - General administration,V16,2
+58,,Total employee benefit payments - School administration,V18,2
+59,,Total employee benefit payments - Operation and maintenance of plant,V22,2
+60,,Total employee benefit payments - Student transportation,V24,2
+61,,Total employee benefit payments - Business/central/other support services,V38,2
+62,,Total employee benefit payments - Food services,V30,2
+63,,Total employee benefit payments - Enterprise operations,V32,2

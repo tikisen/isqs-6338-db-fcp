@@ -4583,6 +4583,70 @@ CREATE TABLE IF NOT EXISTS `exp_types` (
 
 -- --------------------------------------------------------
 
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (1,'','Current operation expenditure - Instruction','E13',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (2,'','State payments on behalf - Instruction benefits','J13',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (3,'','Own retirement system transfer - Instruction','J12',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (4,'','State payments on behalf - Instruction nonbenefits','J14',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (5,'','Exhibit - Payments to private schools','V91',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (6,'','Exhibit - Payments to charter schools','V92',1);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (7,'','Current operation expenditure - Pupil support','E17',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (8,'','Current operation expenditure - Instructional staff support','E07',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (9,'','Current operation expenditure - General administration','E08',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (10,'','Current operation expenditure - School administration','E09',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (11,'','Current operation expenditure - Operation and maintenance of plant','V40',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (12,'','Current operation expenditure - Student transportation','V45',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (13,'','Current operation expenditure - Business/central/other support services','V90',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (14,'','Current operation expenditure - Nonspecified support services','V85',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (15,'','State payments on behalf - Pupil support benefits','J17',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (16,'','State payments on behalf - Instructional staff support benefits','J07',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (17,'','State payments on behalf - General administration benefits','J08',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (18,'','State payments on behalf - School administration benefits','J09',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (19,'','State payments on behalf - Operation and maintenance of plant benefits','J40',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (20,'','State payments on behalf - Student transportation benefits','J45',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (21,'','State payments on behalf - Business/central/other support services benefits','J90',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (22,'','Own retirement system transfer - Support services','J11',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (23,'','State payments on behalf - Support services, nonbenefits','J96',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (24,'','Current operation expenditure - Food services','E11',3);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (25,'','Current operation expenditure - Enterprise operations','V60',3);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (26,'','Current operation expenditure - Other elementary-secondary programs','V65',3);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (27,'','State payments on behalf - Other benefits','J10',3);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (28,'','State payments on behalf - Noninstructional and nonbenefits','J97',3);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (29,'','Current operation expenditure - Community services','V70',4);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (30,'','Current operation expenditure - Adult education','V75',4);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (31,'','Current operation expenditure - Other nonelementary-secondary programs','V80',4);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (32,'','State payments on behalf - Nonelementary-secondary programs','J98',4);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (33,'','Construction','F12',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (34,'','Purchase of land and existing structures','G15',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (35,'','Instructional equipment','K09',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (36,'','Other equipment','K10',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (37,'','Nonspecified equipment','K11',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (38,'','State payments on behalf - Capital outlay','J99',5);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (39,'','Payments to state governments','L12',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (40,'','Payments to local governments','M12',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (41,'','Payments to other school systems','Q11',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (42,'','Interest on school system debt','I86',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (43,'','Total salaries and wages','Z32',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (44,'','Total salaries and wages - Instruction','Z33',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (45,'','Total salaries and wages - Pupil support','V11',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (46,'','Total salaries and wages - Instructional staff support','V13',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (47,'','Total salaries and wages - General administration','V15',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (48,'','Total salaries and wages - School administration','V17',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (49,'','Total salaries and wages - Operation and maintenance of plant','V21',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (50,'','Total salaries and wages - Student transportation','V23',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (51,'','Total salaries and wages - Business/central/other support services','V37',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (52,'','Total salaries and wages - Food services','V29',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (53,'','Total employee benefit payments','Z34',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (54,'','Total employee benefit payments - Instruction','V10',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (55,'','Total employee benefit payments - Pupil support','V12',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (56,'','Total employee benefit payments - Instructional staff','V14',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (57,'','Total employee benefit payments - General administration','V16',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (58,'','Total employee benefit payments - School administration','V18',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (59,'','Total employee benefit payments - Operation and maintenance of plant','V22',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (60,'','Total employee benefit payments - Student transportation','V24',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (61,'','Total employee benefit payments - Business/central/other support services','V38',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (62,'','Total employee benefit payments - Food services','V30',2);
+INSERT INTO `exp_types` (`et_id`,`et_name`,`et_desc`,`et_code`,`ec_id`) VALUES (63,'','Total employee benefit payments - Enterprise operations','V32',2);
+
 --
 -- Table structure for table `memberships`
 --
@@ -4597,7 +4661,15 @@ CREATE TABLE IF NOT EXISTS `memberships` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
+-- -----------------------------------------------------
+-- Insert the content of the other membership staging table into the prod table
+-- -----------------------------------------------------
+INSERT INTO D50_G03_OLTP.memberships (mem_id, mem_num, year, ncesid)
+SELECT mem_id, mem_num, year, ncesid
+FROM    D50_G03_OLTP.memberships_staging;
 
+/*drops the membership staging table*/
+DROP TABLE D50_G03_OLTP.mebmership_staging;
 --
 -- Table structure for table `other_financials`
 --
