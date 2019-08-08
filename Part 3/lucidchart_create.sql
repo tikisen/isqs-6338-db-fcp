@@ -1,48 +1,48 @@
-CREATE TABLE `transactionFacts` (
-  `TransactionKey` <type>,
-  `transaction_amt` <type>,
-  `year` <type>,
-  `TransactionSubcategoryKey` <type>,
-  PRIMARY KEY (`TransactionKey`),
-  KEY `Key` (`TransactionSubcategoryKey`)
-);
+-- TQ Senkungu
+-- Sean McQuade
+-- Biram Nicol
+-- Jeremy Bixby
+-- Group No 3 - D50 - ISQS 6338
 
+CREATE TABLE `transactionFacts` (
+  `TransactionKey` int,
+  `transaction_amt` decimal(15,2),
+  `year` varchar(4),
+  `TransactionSubcategoryKey` int,
+  PRIMARY KEY (`TransactionKey`),
+  KEY `FK` (`TransactionSubcategoryKey`)
+);
 CREATE TABLE `DimTransactionSubCategory` (
-  `TransactionSubCategoryKey` <type>,
-  `TransactionSubCategoryName` <type>,
-  `TransactionCategoryKey` <type>,
+  `TransactionSubCategoryKey` int,
+  `TransactionSubCategoryName` varchar(255),
+  `TransactionCategoryKey` int,
   PRIMARY KEY (`TransactionSubCategoryKey`),
   KEY `FK` (`TransactionCategoryKey`)
 );
-
 CREATE TABLE `DimTransactionCategory` (
-  `TransactionCategoryKey` <type>,
-  `TransactionCategoryName` <type>,
+  `TransactionCategoryKey` int,
+  `TransactionCategoryName` varchar(255),
   PRIMARY KEY (`TransactionCategoryKey`)
 );
-
 CREATE TABLE `DimSchoolDistrict` (
-  `ncesid` <type>,
-  `SchoolDistrictName` <type>,
-  `SchoolLevel` <type>,
-  `GeographyKey` <type>,
-  `CONUM` <type>,
-  `csa` <type>,
-  `cbsa` <type>,
-  `idcensus` <type>,
-  `GovtType` <type>,
+  `ncesid` int,
+  `SchoolDistrictName` varchar(255),
+  `SchoolLevel` int,
+  `GeographyKey` int,
+  `CONUM` varchar(10),
+  `csa` varchar(10),
+  `cbsa` varchar(10),
+  `idcensus` int,
+  `GovtType` int,
   PRIMARY KEY (`ncesid`),
   KEY `FK` (`GeographyKey`)
 );
-
 CREATE TABLE `DimGeography` (
-  `GeographyKey` <type>,
-  `County` <type>,
-  `StateName` <type>,
-  `StateCode` <type>,
-  `usps_code` <type>,
-  `CONUM` <type>,
+  `GeographyKey` int,
+  `County` int,
+  `StateName` varchar(50),
+  `StateCode` int,
+  `usps_code` int,
+  `CONUM` int,
   PRIMARY KEY (`GeographyKey`)
 );
-
-
