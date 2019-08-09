@@ -62,11 +62,9 @@ FROM
   -- DML for dropping in the OTHER finance types
 INSERT INTO
   D50_G03_OLAP.DimFinanceType (category, fin_type, subtype, fin_desc)
-SELECT
-  'OTHER',
-  'SKIP LEVEL',
-  D50_G03_OLTP.other_financials.of_name,
-  D50_G03_OLTP.other_financials.of_desc;
+SELECT 'OTHER', 'SKIP LEVEL', of_name, of_desc
+FROM
+D50_G03_OLTP.other_financials;
 
 
 
@@ -81,12 +79,10 @@ CREATE TABLE `DimYear` (
 INSERT INTO
   DimYear(Year)
 SELECT
-  Year
+  DISTINCT D50_G03_OLTP.revenue.year
 FROM
-  (
-    SELECT
-      DISTINCT D50_G03_OLTP.district_financials.year
-  ) as y;
+  D50_G03_OLTP.revenue;
+
 
 -- DDL for creating the DistrictInfo dimension
 CREATE TABLE `DimDistrictInfo` (
@@ -149,8 +145,8 @@ FROM
       D50_G03_OLTP.districts.dis_name,
       D50_G03_OLTP.districts.csa,
       D50_G03_OLTP.districts.cbsa,
-      D50_G03_OLTP.districts.CONUM,
-      D50_G03_OLTP.districts.state,
+      D50_G03_OLTP.countys.conum,
+      D50_G03_OLTP.countys.st_id,
       D50_G03_OLTP.type_gov.tg_name,
       D50_G03_OLTP.type_gov.tg_desc,
       D50_G03_OLTP.memberships.mem_id,
@@ -162,6 +158,8 @@ FROM
       D50_G03_OLTP.districts
       inner join D50_G03_OLTP.type_gov on D50_G03_OLTP.districts.tg_id = D50_G03_OLTP.type_gov.tg_id
       inner join D50_G03_OLTP.memberships on D50_G03_OLTP.districts.mem_id = D50_G03_OLTP.memberships.mem_id
+      inner join D50_G03_OLTP.countys on D50_G03_OLTP.districts.co_id = D50_G03_OLTP.countys.co_id
+      inner join D50_03_OLTP.sch_levels on D50_G03_OLTP.districts.sl_id = D50_G03_OLTP.sch_levels.sl_id
   ) as d;
 
 
